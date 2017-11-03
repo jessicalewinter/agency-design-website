@@ -1,0 +1,305 @@
+//Estilos Gerais
+body{
+    font-family: $fonte;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    color: $subtitulo;
+    border-radius: 30px;
+    padding:15px 65px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 40px;
+    font-size: 20px;
+    
+}
+.btn-high{
+    background: $botao;
+}
+.btn-sec{
+    background: $focus;
+}
+.btn-small{
+    padding: 8px 40px;
+    margin-left:0;
+    color: $white;
+}
+
+//Banner
+
+.banner{
+    background:url(../img/bg-banner.jpg) no-repeat center;
+    background-size: cover;
+    
+    .logo{
+        font-size: 30px;
+        float:left;
+        color: $white;
+        font-weight: 700;
+        margin: -5px 5px 0px 0;
+        span{
+            font-weight: normal;
+        }
+    }
+    header{
+        padding: 32px 0;
+    }
+}
+nav{
+    float: right;
+    ul li a{
+    text-decoration: none;
+    color: $white;
+    &:hover{
+        color:$botao;
+    }
+    @include device(medium){
+        font-size: 20px;
+        }
+    }
+    ul li{
+        display: inline-block;
+        font-size: 25px;
+        font-weight: 700;
+        margin-left:40px;
+        @include device(medium){
+            font-size: 20px;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+    }
+    .btn-small{
+        font-size: 25px;
+        font-weight: 400;
+        &:hover{
+           background:$botao;
+            color: $white;
+        }
+        @include device(medium){
+            font-size: 20px;
+            padding: 10px 35px;
+        }
+    }
+}
+.content{
+    padding: 80px 0;
+    .title, .subtitle{
+        text-align: center;
+        margin: 20px auto;
+    }
+    .title{
+        font-size: 72px;
+        color: $white;
+        font-weight: 700;
+    }
+    .subtitle{
+        font-size: 30px;
+        color: $subtitulo;
+        font-weight: 400;
+        width: 500px;
+        line-height: 1.5;
+    }
+}
+.button-wrapper{
+    text-align: center;
+    margin: 60px 0;
+    @include device(medium){
+        margin-top: 60px;
+    }
+    .btn-high,.btn-sec{
+        @include device(small){
+            display: block;
+            margin: 20px auto;
+            width: 50%;
+            padding: 20px 0;
+        }
+    }
+    .btn-high:hover{
+        background: $focus;
+    }
+    .btn-sec:hover{
+        background: $botao;
+    }
+}
+.icone-banner {
+    padding-bottom: 100px;
+    margin-top: -50px;
+    a{
+       position:absolute;
+        right: 45%;
+        text-align: center;
+    }
+    @include device(medium){
+        margin-top: -70px;
+    }
+}
+
+//Service Styles
+
+#service{
+    background: $bg-service;
+    padding: 40px;
+    position: relative;
+    padding-bottom: 85px;
+
+    .serv{
+        width: 30%;
+        float: left;
+        background: $white; 
+        padding: 20px;
+        margin:-80px 15px 15px 15px;
+        position: relative;
+        text-align: center;
+        height: 250px;
+        @include box-shadow(0px 0px 57px 0px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+        @include device(medium){
+            margin-left: 0;
+        }
+        @include device(small){
+            text-align: center;
+            width:80%;
+            float: none;
+            display: block;
+            margin: 30px auto;
+        }
+        
+        h3{
+            color: $lista;
+            font-size: 31px;
+            padding: 15px;
+            font-weight: 700;
+            @include device(medium){
+                font-size: 25px;
+            }
+        }
+        p{
+            color: $lista-desc;
+            font-size: 18px;
+            margin-bottom: 40px;
+            
+        }
+        
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            height: 50px;
+            left: 50%;
+            border-left: 2px solid $botao;
+            @include device(small){
+                display: none;
+            }
+        }
+    }
+    .middle::after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom:-100px;
+        height: 100px;
+        left:50%;
+        border-left: 2px solid $botao;
+        @include device(small){
+            display: none;
+        }
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 54.2%;
+        right: 23.86%;
+        bottom: 50px;
+        border-bottom: 2px solid $botao; 
+        @include device(medium){
+            width:485px;
+            right: 29.9%;
+        }
+        @include device(small){
+            display: none;
+        }
+    }
+}
+
+//Work Styles
+
+#work{
+    background: $bg-work;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    .subtitle-h2{
+        font-size: 50px;
+        color: $white;
+        text-align: center;
+        font-weight: 700;
+        padding: 40px 0;
+    }
+    #photos{
+        height: 400px;
+        li{
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 15px;
+            @include box-shadow(0px 0px 57px 0px rgba(0, 0, 0, 0.25));
+            border: 80px 80px 0 0;
+            z-index: 3;
+            background: $white;
+            position: absolute;
+        }
+       li img{
+            width: 100%;
+        }
+       li:nth-child(1){
+            bottom:-37px;
+            left: 0;
+            @include transform(0.8,0.8);
+            z-index: 2;
+        }
+        li:nth-child(2){
+            left: 50%;
+            bottom:0px;
+            margin-left: -300px;
+            z-index: 4;
+        }
+        li:nth-child(3){
+            bottom:-37px;
+            right: 0;
+            @include transform(0.8,0.8);
+            z-index: 2;
+        }
+    }
+    .slider{
+        list-style: none;
+        padding: 20px 20px;
+        
+        a{
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            position: relative;
+            display: inline-block;
+            background: #747285;
+            margin:0 8px;
+            left:47%;
+            transition: background .4s ease-in-out;
+            text-align: center;
+        }
+        a:hover{
+            background-color: $botao;
+        }
+        a.current{
+            background-color: $botao;
+        }
+    }
+}

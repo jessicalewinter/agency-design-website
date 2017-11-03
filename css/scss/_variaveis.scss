@@ -1,0 +1,43 @@
+//Cores 
+$focus:rgba(250,250,250,0.5);
+$white:#fff;
+$subtitulo:#d9e0e6;
+$botao:#79c582;
+$lista:#3f3d4e;
+$lista-desc:#a9a6ba;
+$linha:#dbd9e7;
+$bg-work:#413a66;
+$slide:#747285;
+$desc-touch:#9d9ab0;
+$bg-service:#e9e8ef;
+
+//Fonte
+
+$fonte:"Brandon Grotesque", Helvetica, sans-serif;
+
+//Mixin fonte
+
+@function em($size, $base:16){
+    @return $size/$base + em;
+}
+
+//Box-shadow
+
+@mixin box-shadow($shadow...){
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin transform($scale...){
+    -webkit-transform: $scale;
+    -moz-transform: $scale;
+    transform: $scale;
+}
+
+
+
+
+
+
+
